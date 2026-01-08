@@ -1,7 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>firstpage</title>
+    <meta charset="UTF-8">
+    <title>Digital Notice Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <h1>ABC Institute – Digital Notice Board</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Admin Panel -->
+        <div class="admin-panel">
+            <h2>Admin Notice Panel</h2>
+
+            <form id="noticeForm">
+                <label for="title">Notice Title *</label>
+                <input type="text" id="title" maxlength="100" placeholder="Enter notice title">
+
+                <label for="content">Notice Description *</label>
+                <textarea id="content" maxlength="500" placeholder="Enter notice content"></textarea>
+
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="general">General</option>
+                    <option value="exam">Exam</option>
+                    <option value="event">Event</option>
+                </select>
+
+                <label for="publishDate">Publish Date *</label>
+                <input type="date" id="publishDate">
+
+                <label for="expiryDate">Expiry Date (Optional)</label>
+                <input type="date" id="expiryDate">
+
+                <label>
+                    <input type="checkbox" id="important">
+                    Mark as Important
+                </label>
+
+                <button type="submit">Publish Notice</button>
+
+                <div id="message"></div>
+            </form>
+        </div>
+
+        <!-- Notice Board -->
+        <div class="notice-board" id="noticeBoard">
+            <h2>Notice Board</h2>
+
+            <!-- Notices will be added dynamically here -->
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
