@@ -1,0 +1,187 @@
+/* ===============================
+   Global Reset & Base Styling
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===============================
+   Header
+================================ */
+header {
+    background: #1e3c72;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* ===============================
+   Main Layout
+================================ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ===============================
+   Admin Panel
+================================ */
+.admin-panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.admin-panel h2 {
+    margin-bottom: 15px;
+    color: #2a5298;
+}
+
+.admin-panel label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.admin-panel textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.admin-panel button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #2a5298;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.admin-panel button:hover {
+    background: #1e3c72;
+}
+
+/* ===============================
+   Notice Board
+================================ */
+.notice-board {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Auto-scroll support */
+.notice-board.auto-scroll {
+    overflow: hidden;
+}
+
+.notice-board h2 {
+    margin-bottom: 15px;
+    color: #2a5298;
+}
+
+/* ===============================
+   Notice Card
+================================ */
+.notice {
+    background: #fafafa;
+    border-left: 6px solid #2a5298;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeIn 0.4s ease-in;
+}
+
+.notice h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.notice .date {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.notice p {
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+/* ===============================
+   Category Colors
+================================ */
+.notice.exam {
+    border-left-color: #d32f2f;
+}
+
+.notice.event {
+    border-left-color: #f57c00;
+}
+
+.notice.general {
+    border-left-color: #388e3c;
+}
+
+/* Category Badge */
+.category-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 4px 8px;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.badge-exam {
+    background: #d32f2f;
+}
+
+.badge-event {
+    background: #f57c00;
+}
+
+.badge-general {
+    background: #388e3c;
+}
+
+/* ============================*
